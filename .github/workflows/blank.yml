@@ -24,6 +24,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the jo
     steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 0
       - run: |
           echo "github.repository=${{github.repository}}"
           echo "github.repository_ownere=${{github.repository_owner}}"
