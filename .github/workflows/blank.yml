@@ -26,6 +26,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          echo ${{env.GITHUB_HEAD_REF}}
-          echo ${{env.GITHUB_BASE_REF}}
+          echo "github.event_name=${{ github.event_name }}"
+          echo "GITHUB_HEAD_REF=${{ env.GITHUB_HEAD_REF }}"
+          echo "GITHUB_BASE_REF=${{ env.GITHUB_BASE_REF }}"
           git show-ref
