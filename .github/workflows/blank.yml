@@ -22,7 +22,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the jo
     steps:
-      - name: Dump vars context
-        env:
-          VARS_JSON: ${{ toJSON(vars) }}
-        run: echo "${VARS_JSON}"
+      - run: |
+        echo ${{env.GITHUB_HEAD_REF}}
+        echo ${{env.GITHUB_BASE_REF}}
