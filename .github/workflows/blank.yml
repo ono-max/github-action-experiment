@@ -27,6 +27,8 @@ jobs:
       - run: |
           echo "github.event_name=${{ github.event_name }}"
           echo "GITHUB_HEAD_REF=$GITHUB_HEAD_REF"
+          echo "GITHUB_HEAD_REF=${GITHUB_HEAD_REF}"
+          echo "GITHUB_HEAD_REF=${{GITHUB_HEAD_REF}}"
           echo "GITHUB_BASE_REF=$GITHUB_BASE_REF"
           echo "----- Output for 'git show-ref' -----"
           git show-ref
